@@ -44,7 +44,7 @@ end
 
 # Overwrite the nix command
 function nix
-    if test \$argv[1] = run; or test \$argv[1]; = develop or \$argv[1] = shell
+    if test \$argv[1] = run; or test \$argv[1] = develop; or \$argv[1] = shell
         $(which .any-nix-wrapper) fish \$argv
     else
         command nix \$argv
